@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+ <div class="login">
+  <h1>Heart Failure Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input id="a" type="text" name="age" placeholder="Age (40 to 95)" required="required" />
+        <input id="b" type="text" name="anaemia" placeholder="Anaemia Yes(1) or No(0)" required="required" />
+    <input id="c" type="text" name="creatinine_phosphokinase" placeholder="Creatinine phosphokinase (23 to 7861)" required="required" />
+    <input id="d" type="text" name="diabetes" placeholder="Diabetes Yes(1) or No(0)" required="required" />
+    <input id="e" type="text" name="ejection_fraction" placeholder="Ejection fraction (14 to 80)" required="required" />
+    <input id="f" type="text" name="high_blood_pressure" placeholder="High blood pressure Yes(1) or No(0)" required="required" />
+    <input id="g" type="text" name="platelets" placeholder="Platelets (25.1k to 850k)" required="required" />
+    <input id="h" type="text" name="serum_creatinine" placeholder="Serum creatinine (0.5 to 9.4)" required="required" />
+    <input id="i" type="text" name="serum_sodium" placeholder="Serum sodium (113 to 148)" required="required" />
+    <input id="j" type="text" name="sex" placeholder="Sex Male(1) or Female(0)" required="required" />
+    <input id="k" type="text" name="smoking" placeholder="Smoking Yes(1) or No(0)" required="required" />
+    
+
+        <button id="btn" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   
+
+ </div>
+
+
+</body>
+</html>
